@@ -1,0 +1,23 @@
+columns:
+    type:
+        label: Type
+        type: text
+        searchable: true
+        sortable: true
+    employer:
+        label: Employer
+        type: text
+        searchable: true
+        sortable: true
+    visible:
+        label: Visible
+        type: switch
+    image:
+        label: Image
+        type: partial
+        path: ~/plugins/nirjankhadka/work/models/work/_image_column.htm
+    link:
+        label: Link
+        type: text
+        searchable: true
+        sortable: true

@@ -1,0 +1,21 @@
+.litebox-button{
+    background: $primary-light;
+    &:hover,&:focus{
+        background: $primary-dark;
+    }
+}
+
+.litebox-outer.-inactive .litebox-button, .litebox-outer.-inactive .litebox-image-caption{
+    opacity: 1;
+}
+
+.litebox-button-close{
+    top: 30px;
+}
+
+.litebox-image-caption{
+    right: 0;
+    background: $dark;
+    color: $secondary-color;
+    font-size: 1.8rem;
+}

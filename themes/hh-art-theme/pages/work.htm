@@ -1,0 +1,40 @@
+title = "work"
+url = "/work/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Nirjankhadka\Work\Models\Work"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "employer"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    <section class="banner">
+        <div class="banner-content">
+            <h2 class="banner-title">{{ record.employer }}</h2>
+        </div>
+    </section>
+    <div class="container">
+        <div class="work-detail">
+            <div class="work-info">
+                <p><Strong>{{ record.type }}</Strong></p>
+                <p><Strong><a href="{{ record.link }}" target="_blank">{{ record.link }}</a> </Strong></p>
+            </div>
+            <div class="work-description">
+                {{ record.desc|raw }}
+                <img src="{{record.fullscreen.path }}" alt="{{ record.employer }} website">
+            </div>
+        </div>
+    </div><!-- end container -->
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+
+
+

@@ -1,0 +1,39 @@
+<div id="contact">
+    <div class="container">
+        <div id="{{ __SELF__ }}_forms_flash"></div>
+        <div class="contact-box">
+            <h2>Send me a Quick Message</h2>
+            <p>I will Reply
+                <strong>ASAP</strong> or you can follow me on social media.</p>
+            <!-- The above form looks like this -->
+            <form class="contact-box--form" data-request="{{ __SELF__ }}::onFormSubmit" data-request-validate>
+                {{ form_token() }}
+                <div class="row">
+                    <div class="six columns">
+                        <div class="contact-box--input-group">
+                            <div data-validate-for="name" style="color: red;"></div>
+                            <input class="u-full-width" placeholder="Your Name" name="name" type="text" id="name">
+                            <label for="name">Name</label>
+                            
+                        </div>
+                    </div>
+                    <div class="six columns">
+                        <div class="contact-box--input-group">
+                            <div data-validate-for="email" style="color: red;"></div>
+                            <input class="u-full-width" placeholder="Your Email" name="email" type="email">
+                            <label for="email">Email</label>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div data-validate-for="comment" style="color: red;"></div>
+                <textarea class="u-full-width" name="comment" placeholder="Hi Howard …"></textarea>
+                
+                <input class="button-primary" value="Send" type="submit">
+            </form>
+        </div>
+        <!-- end contact box -->
+    </div>
+    <!-- end container -->
+</div>
+<!-- end contact -->

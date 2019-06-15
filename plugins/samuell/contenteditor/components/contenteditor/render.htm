@@ -1,0 +1,12 @@
+
+{% if __SELF__.fixture %}<{{ __SELF__.fixture }} {% if __SELF__.class %}class="{{ __SELF__.class }}"{% endif %}>{% endif %}
+    {{ content|raw }}
+{% if __SELF__.fixture %}</{{ __SELF__.fixture }}>{% endif %}
+
+{% if __SELF__.renderCount == 1 %}
+    {% put styles  %}
+    <style title="contenteditor" type="text/css">
+        {{ __SELF__.additional_styles }}
+    </style>
+    {% endput %}
+{% endif %}

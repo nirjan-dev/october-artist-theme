@@ -1,0 +1,17 @@
+#footer{
+    background: darken($color: $grey, $amount: 15%);
+    padding: 1em 0em 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    small:not(:last-child){
+        margin-right: 2em;
+    }
+    a:hover,a:focus{
+        color: $primary-dark;
+        font-weight: bold;
+    }
+}

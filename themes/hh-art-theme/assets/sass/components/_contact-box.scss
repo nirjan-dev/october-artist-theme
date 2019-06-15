@@ -1,0 +1,45 @@
+.contact-box{
+   
+    p{
+        font-size: 2rem;
+        margin-top: 2em;
+    }
+    input,textarea{
+        background: none;
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid $primary-light;
+        font-size: 1.8rem;
+        margin-bottom: 1em;
+        &:focus{
+            border: none;
+            border-bottom: 2px solid $primary-dark;
+            background: darken($color: $grey, $amount: 5%);
+        }
+    }
+    textarea{
+        min-height: 115px;
+    }
+
+    &--input-group{
+        position: relative;
+        label{
+            font-weight: lighter;
+            color: lighten($color: $primary-color, $amount: 20%);
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: 0.3s opacity ease-out, 0.3s transform cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        input{
+            &:focus,&:active{
+                & + label{
+                    transform: translateY(-25px);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    
+}

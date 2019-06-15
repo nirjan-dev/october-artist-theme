@@ -1,0 +1,38 @@
+#contact{
+    background: $grey;
+    padding: 2.5em 1em;
+
+
+    #work + &{
+        margin-top: 160px;
+        @media (max-width: 950px) {
+            margin-top: 120px;
+        }
+    
+        @media (max-width: 750px) {
+            margin-top: 120px;
+        }
+    
+        @media (max-width: 550px) {
+            margin-top: 80px;
+        }
+    }
+}
+
+.alert{
+    padding: 0.5em 0.2em;
+}
+.alert p {
+    margin-bottom: 0;
+}
+.alert-success {
+    color: hsl(87.1, 36.5%, 54.9%);
+    background: hsl(75, 21.4%, 89%);
+}
+.alert-danger{
+    color: hsl(347.1, 36.5%, 54.9%);
+    background: hsl(0, 30%, 88.2%);
+}
+.alert .close{
+    display: none;
+}

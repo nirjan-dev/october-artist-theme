@@ -1,0 +1,4 @@
+title: Work
+modelClass: Nirjankhadka\Work\Models\Work
+toolbar:
+    buttons: reorder_toolbar

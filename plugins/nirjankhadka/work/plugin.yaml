@@ -1,0 +1,11 @@
+plugin:
+    name: 'nirjankhadka.work::lang.plugin.name'
+    description: 'nirjankhadka.work::lang.plugin.description'
+    author: NirjanKhadka
+    icon: oc-icon-pencil-square
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Work
+        url: nirjankhadka/work/work
+        icon: icon-pencil-square

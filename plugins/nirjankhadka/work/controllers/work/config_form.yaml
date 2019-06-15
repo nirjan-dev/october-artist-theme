@@ -1,0 +1,10 @@
+name: Work
+form: $/nirjankhadka/work/models/work/fields.yaml
+modelClass: Nirjankhadka\Work\Models\Work
+defaultRedirect: nirjankhadka/work/work
+create:
+    redirect: 'nirjankhadka/work/work/update/:id'
+    redirectClose: nirjankhadka/work/work
+update:
+    redirect: nirjankhadka/work/work
+    redirectClose: nirjankhadka/work/work

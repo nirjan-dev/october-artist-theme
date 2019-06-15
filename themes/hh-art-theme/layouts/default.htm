@@ -1,0 +1,67 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Howard Hamlin | Illustrator and Digital Artist</title>
+    <meta name="description" content="I'm Howard Hamlin, An Illustrator and Digital Artisit.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Search Engine -->
+    <meta name="description" content="I'm Howard Hamlin,I love connecting brands and companies with their customers through good design, I can help you with logos,illustrations and digital design. I teach design on skillshare and I post very often on dribbble">
+    <meta name="image" content="https://nk-webdev.github.io/illustrator-portfolio-site/img/screenshot.png">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Howard Hamlin | Illustrator and Digital Artist">
+    <meta itemprop="description" content="I'm Howard Hamlin,I love connecting brands and companies with their customers through good design, I can help you with logos,illustrations and digital design. I teach design on skillshare and I post very often on dribbble">
+    <meta itemprop="image" content="https://nk-webdev.github.io/illustrator-portfolio-site/img/screenshot.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Howard Hamlin | Illustrator and Digital Artist">
+    <meta name="twitter:description" content="I'm Howard Hamlin,I love connecting brands and companies with their customers through good design, I can help you with logos,illustrations and digital design. I teach design on skillshare and I post very often on dribbble">
+    <meta name="twitter:site" content="@NirjanKhadka">
+    <meta name="twitter:creator" content="@NirjanKhadka">
+    <meta name="twitter:image:src" content="https://nk-webdev.github.io/illustrator-portfolio-site/img/screenshot.png">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Howard Hamlin | Illustrator and Digital Artist">
+    <meta name="og:description" content="I'm Howard Hamlin,I love connecting brands and companies with their customers through good design, I can help you with logo,                     illustrations and digital design. I teach design on skillshare and I post very often on dribbble">
+    <meta name="og:image" content="https://nk-webdev.github.io/illustrator-portfolio-site/img/screenshot.png">
+    <meta name="og:url" content="https://nk-webdev.github.io/illustrator-portfolio-site/">
+    <meta name="og:site_name" content="Howard Hamlin | Illustrator and Digital Artist">
+    <meta name="og:locale" content="en_US">
+    <meta name="fb:admins" content="100001755474612">
+    <meta name="og:type" content="website">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+    <link href="{{ 'assets/css/litebox.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/main.css'|theme }}" rel="stylesheet">
+    {% styles %}
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    {% partial 'nav' %}
+
+    {% page %}
+
+
+
+
+    {% partial 'footer' %}
+
+    <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+    <!-- <script src="{{ 'assets/js/litebox.min.js'|theme }}"></script> -->
+    <script src="{{ 'assets/js/main.js'|theme }}"></script>
+    {% framework extras %}
+    {% scripts %}
+</body>
+
+</html>

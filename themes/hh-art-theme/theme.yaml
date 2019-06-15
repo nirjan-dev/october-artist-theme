@@ -1,0 +1,32 @@
+name: 'HH Art Theme'
+description: 'Custom Theme for HH art Website'
+author: 'Nirjan Khadka'
+homepage: 'https://thenkway.wordpress.com'
+code: ''
+previewImage: 'assets/img/screenshot.png'
+form:
+  fields:
+    site_name:
+      label: Site name
+      comment: The website name as it should appear on the front-end
+      default: HH Art
+    site_logo:
+      label: Site Logo
+      comment: The website logo as it should appear on the front-end
+      type: fileupload
+      mode: image
+      imageHeight: 260
+      imageWidth: 260
+    facebook_url:
+      label: Facebook Url
+      comment: The link to your facebook id
+      default: https://www.facebook.com
+    twitter_url:
+      label: Twitter Url
+      comment: The link to your twitter id
+      default: https://www.twitter.com
+    instagram_url:
+      label: Dribble Url
+      comment: The link to your dribble id
+      default: https://www.instagram.com
+

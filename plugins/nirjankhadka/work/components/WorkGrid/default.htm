@@ -1,0 +1,27 @@
+{% set work = __SELF__.work %}
+
+
+<div id="work">
+    <div class="container">
+        <div class="work-grid">
+            {% for item in work %}
+                {% if item.visible == true %}
+                    <a href="{{ item.image.path }}" class="work-grid--item">
+                        <figure>
+                            <img src="{{ item.image.path }}" alt="img">
+                            <figcaption>
+                                <h3>{{ item.employer }}</h3>
+                                <span>{{ item.type }}</span>
+                                <p>View Details</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <!-- end work grid item -->
+                {% endif %}
+            {% endfor %}
+        </div>
+        <!-- end work grid -->
+    </div>
+    <!-- end container -->
+</div>
+<!-- work -->

@@ -1,0 +1,71 @@
+title = "Home"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[contenteditor]
+
+[genericForm]
+rules[name] = "required"
+rules[email] = "required|email"
+rules[comment] = "required"
+rules_messages[name.required] = "Your name is required"
+rules_messages[email.email] = "sorry! Invalid Email"
+rules_messages[email.required] = "Your email is required"
+rules_messages[comment.required] = "Did you forget your message?"
+messages_success = "Yay! Your messege is sent successfully"
+messages_errors = "Oops there seems to be a problem, Try Again"
+mail_enabled = 1
+mail_subject = "Contact Form message"
+mail_recipients[] = "webdev.nk@gmail.com"
+mail_replyto = "email"
+reset_form = 0
+inline_errors = "display"
+sanitize_data = "htmlspecialchars"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+
+[builderList]
+modelClass = "Nirjankhadka\Work\Models\Work"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "employer"
+noRecordsMessage = "No records found"
+detailsPage = "work"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+{% component 'contenteditor' file="header.htm" fixture="header" %}
+
+{% set work = builderList.records %}
+
+
+<div id="work">
+    <div class="container">
+        <div class="work-grid">
+            {% for item in work %}
+                {% if item.visible == true %}
+                    <a href="work/{{ item.slug }}" class="work-grid--item">
+                        <figure>
+                            <img src="{{ item.image.path }}" alt="img">
+                            <figcaption>
+                                <h3>{{ item.employer }}</h3>
+                                <span>{{ item.type }}</span>
+                                <p>View Details</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <!-- end work grid item -->
+                {% endif %}
+            {% endfor %}
+        </div>
+        <!-- end work grid -->
+    </div>
+    <!-- end container -->
+</div>
+<!-- work -->
+
+{% component 'genericForm' %}

@@ -1,0 +1,51 @@
+fields:
+    type:
+        label: 'Type of Work'
+        span: auto
+        type: text
+    employer:
+        label: Employer
+        span: auto
+        type: text
+    image:
+        label: Image
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        imageWidth: '200'
+        imageHeight: '200'
+        required: 1
+        type: fileupload
+    visible:
+        label: Visible
+        span: auto
+        default: 1
+        type: switch
+    link:
+        label: Link
+        span: auto
+        type: text
+    fullscreen:
+        label: 'Full Screen Image'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    desc:
+        label: Description
+        size: ''
+        span: full
+        type: richeditor
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: employer
+            type: slug
+        type: text
